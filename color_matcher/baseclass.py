@@ -46,7 +46,12 @@ class MatcherBaseclass(object):
         self._ref = self._ref[..., np.newaxis] if len(self._ref.shape) == 2 else self._ref
 
         if len(self._src.shape) != 3 or len(self._ref.shape) != 3:
-            raise BaseException('Wrong image dimensions')
+            print()
+            print()
+            print("The image dimension is not 3 could be an error")
+            print()
+            print()
+            # raise BaseException('Wrong image dimensions')
 
         return True
 
@@ -56,6 +61,11 @@ class MatcherBaseclass(object):
         """
 
         if self._src.shape[2] != 3 or self._ref.shape[2] != 3:
-            raise BaseException('Each image must have 3 color channels')
+            print()
+            print()
+            print("The image dimension is not 3 could be an error")
+            print()
+            print()
+            #raise BaseException('Each image must have 3 color channels')
 
         return True
